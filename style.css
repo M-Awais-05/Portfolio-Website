@@ -231,18 +231,215 @@ i {
 /* ----------------------------Image-Css----------------------- */
 .featured-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+    justify-content: right;
+    align-items: left;
+    min-height: 90vh;
     width: 100%;
 }
-
 .image {
-    margin-top: 10%;
-    width: 500px;
-    height: 700px;
-    border-radius: 40% 40% 40% 40%;
+    margin-top: 12%;
+    width: 380px;
+    height: 570px;
+    border-radius: 30% 30% 25% 25%;
     overflow: hidden;
-    animation: imgFloat 5s ease-in-out infinite;
+    animation: imgFloat 3s ease-in-out infinite;
+}
+.image img {
+  width: 380px;
+  height: 580px;
+  object-fit: cover;
+  object-position: top; /* aligns the top of image */
+  padding-top: 10px; /* try adding this */
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(40px);
+    }
 }
 
+/* --------------------------------About-CSS--------------------------------- */
+.section{
+    padding-block: 5em;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight:600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+/* --------------------------------About-info-CSS--------------------------------- */
+.about-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 45px 45px ;
+    padding-inline: 35px ;
+    border: 2px solid #fff;
+    background: transparent;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    border-radius: 20px;
+}
+.about-me *{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+.about-info figcaption {
+    width: 100%;
+    padding: 25px;
+    position: relative;
+}
+.about-me .profile{
+    width: 80px;
+    height: 80px;
+    object-fit:contain;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.about-me h2{
+    color: var(--text-color);
+}
+.about-me p{
+    color: var(--text-color);
+    margin-top: 10px;
+}
+.about-info .about-me-btn{
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: #8749f2;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.5 ease;
+    margin-top: 20px;
+}
+
+/* -------------------skills- CSS */
+.skill{
+    position: relative;
+    max-width:500px;
+    width: 100%;
+    padding: 10px 20px ;
+    border: 2px solid #fff;
+    background: transparent;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    border-radius: 20px;
+}
+.skill .skills-box{
+    width: 100%;
+    margin: 20px 0;
+}
+.skills-box .title{
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.skills-box .skill-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skills-box .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    background: #8749f2;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.html{
+    animation-delay: 0.1s;
+    width: 80%;
+}
+.skill-per.css{
+    animation-delay: 0.2s;
+    width: 80%;
+}
+.skill-per.python{
+    animation-delay: 0.3s;
+    width: 70%;
+}
+.skill-per.php{
+    animation-delay: 0.4s;
+    width: 60%;
+}
+.skill-per.javascript{
+    animation-delay: 0.5s;
+    width: 40%;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 20px;
+    background: #8749f2;
+    z-index: 1;
+}
+
+/* --------------------------------Project-Box-CSS--------------------------------- */
+.projects-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    text-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    overflow: hidden;
+    cursor: pointer;
+}
+.project-box >i{
+    font-size: 50px;
+    color: #8749f2;
+    margin-bottom: 25px;
+}
