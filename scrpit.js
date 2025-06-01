@@ -38,13 +38,14 @@ sr.reveal(".text-info", {delay: 200 });
 sr.reveal(".text-btn", {delay: 200 });
 sr.reveal(".social_icons", {delay: 200 });
 sr.reveal(".featured-image", {delay: 320 });
+
 sr.reveal(".project-box", { interval: 200});
 sr.reveal(".top-header", {});
 
 const srLeft = ScrollReveal({
     origin: "left",
     distance: "80px",
-    duration: 200,
+    duration: 2000,
     reset:true
 })
 
@@ -55,7 +56,7 @@ srLeft.reveal(".contact-info", {delay:200});
 const srRight = ScrollReveal({
     origin: "right",
     distance: "80px",
-    duration: 200,
+    duration: 2000,
     reset:true
 })
 
@@ -63,28 +64,4 @@ srRight.reveal(".skill", {delay:200});
 srRight.reveal(".Skills-box", {delay:200});
 srRight.reveal(".form-control", {delay:200});
 
-// ----------------------Active link--------------------
-const sections = document.querySelectorAll(".section[id]");
-
-function scrollActive() {
-    const scrollY = window.scrollY;
-
-    sections.forEach((current) => {
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 50,
-            sectionId = current.getAttribute('id');
-
-        const link = document.querySelector(".nav-manu a[href*='" + sectionId + "']");
-
-        if (link) {
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                link.classList.add("active-link");
-            } else {
-                link.classList.remove("active-link");
-            }
-        }
-    });
-}
-
-window.addEventListener("scroll", scrollActive);
 
