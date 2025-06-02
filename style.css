@@ -104,7 +104,8 @@ nav {
 }
 
 .nav-link:hover {
-    color: #a77fec;
+    color: #8749f2;
+    text-shadow: 1px 1px 2px rgba(0, 0,0,0.1);
 }
 
 .social-link {
@@ -216,21 +217,24 @@ body.dark #moon {
 
 .btn {
     text-decoration: none;
-    font-size: 15px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 8px;
     font-weight: 500;
     background: #8749f2;
     transition: all 0.5s ease;
 }
-
+.btn:hover {
+    background: #8749f2;
+    transform: scale(1.1);
+}
 .btn i {
     margin-right: 10px;
 }
 
 i {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* ------------------social_icons----------------------- */
@@ -263,15 +267,15 @@ i {
     display: flex;
     justify-content: right;
     align-items: left;
-    min-height: 90vh;
+    min-height: 80vh;
     width: 100%;
 }
 
 .image {
     margin-top: 12%;
     width: 380px;
-    height: 570px;
-    border-radius: 30% 30% 25% 25%;
+    height: 580px;
+    border-radius: 20% 20% 15% 15%;
     overflow: hidden;
     animation: imgFloat 3s ease-in-out infinite;
 }
@@ -282,7 +286,7 @@ i {
     object-fit: cover;
     object-position: top;
     /* aligns the top of image */
-    padding-top: 10px;
+    margin-bottom: 10px;
     /* try adding this */
 }
 
@@ -295,6 +299,7 @@ i {
 /* --------------------------------About-CSS--------------------------------- */
 .section {
     padding-block: 5em;
+    margin-top: 10%;
 }
 
 .row {
@@ -711,192 +716,4 @@ footer {
 .website-links {
     text-decoration: none;
     color: var(--color-white);
-}
-
-/* -------------------------------Media Query---------------------------- */
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-    .featured-text .hello,
-    .featured-name,
-    .typedText {
-        font-size: 2.5rem;
-    }
-    
-    .text-info {
-        font-size: 1rem;
-    }
-    
-    .image, .image img {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .project-box {
-        width: 45%;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .nav-manu {
-        display: flex !important;
-    }
-    
-    .nav-manu-btn {
-        display: none;
-    }
-    
-    .featured-box {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .featured-text {
-        width: 50%;
-        order: 1;
-        align-items: flex-start;
-        text-align: left;
-        padding-left: 20px;
-    }
-    
-    .featured-image {
-        width: 50%;
-        order: 2;
-        justify-content: flex-end;
-    }
-    
-    .image, .image img {
-        width: 300px;
-        height: 450px;
-    }
-    
-    .row {
-        flex-direction: row;
-    }
-    
-    .col {
-        width: 50%;
-    }
-    
-    .projects-container {
-        flex-wrap: wrap;
-    }
-    
-    .project-box {
-        width: 30%;
-    }
-    
-    .form-inputs {
-        flex-direction: row;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .featured-text .hello,
-    .featured-name,
-    .typedText {
-        font-size: 3.5rem;
-    }
-    
-    .text-info {
-        font-size: 1.1rem;
-    }
-    
-    .image, .image img {
-        width: 380px;
-        height: 570px;
-    }
-    
-    .nav-link {
-        margin-inline: 25px;
-    }
-    
-    .projects-container {
-        justify-content: space-between;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .wrapper {
-        padding-inline: 15vw;
-    }
-    
-    nav {
-        padding-inline: 15vw;
-    }
-}
-
-/* Special cases for very small devices (below 576px) */
-@media (max-width: 575px) {
-    .featured-text .hello,
-    .featured-name,
-    .typedText {
-        font-size: 2rem;
-    }
-    
-    .text-btn {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .social_icons {
-        gap: 20px;
-    }
-    
-    .footer-manu {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .footer-manu-list a {
-        margin-inline: 10px;
-    }
-    
-    .form-inputs {
-        flex-direction: column;
-    }
-    
-    .input-field {
-        width: 100%;
-    }
-}
-
-/* Fix for navigation menu toggle */
-@media (max-width: 767px) {
-    .nav-manu-btn {
-        display: flex;
-    }
-    
-    .nav-manu {
-        display: none;
-        position: fixed;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        background: var(--nav-color);
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-    
-    .nav-manu.active {
-        display: flex;
-    }
-    
-    .nav_manu_list {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .nav_list {
-        margin: 10px 0;
-    }
-    
-    .mode {
-        margin-left: auto;
-        margin-right: 20px;
-    }
 }
